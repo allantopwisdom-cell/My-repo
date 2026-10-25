@@ -1,0 +1,9 @@
+Package: com.example.islandprism
+Name: IslandPrism
+Version: 1.0.0~rc2
+Architecture: iphoneos-arm64e
+Description: Experimental Dynamic Island decorations; prerelease with safe-mode flag and diagnostics. Native capture unchanged.
+Maintainer: Local Build
+Author: Local Build
+Section: Tweaks
+Depends: firmware (>= 16.0), preferenceloader

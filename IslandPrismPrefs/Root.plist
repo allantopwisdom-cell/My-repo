@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict><key>items</key><array>
+<dict><key>cell</key><string>PSGroupCell</string><key>label</key><string>IslandPrism 基础控制</string></dict>
+<dict><key>cell</key><string>PSSwitchCell</string><key>label</key><string>启用美化</string><key>key</key><string>enabled</string><key>default</key><true/><key>get</key><string>readPreferenceValue:</string><key>set</key><string>setPreferenceValue:specifier:</string></dict>
+<dict><key>cell</key><string>PSSwitchCell</string><key>label</key><string>七彩光圈阴影</string><key>key</key><string>glow</string><key>default</key><true/><key>get</key><string>readPreferenceValue:</string><key>set</key><string>setPreferenceValue:specifier:</string></dict>
+<dict><key>cell</key><string>PSSwitchCell</string><key>label</key><string>录屏时隐藏插件覆盖层</string><key>key</key><string>hideOnCapture</string><key>default</key><false/><key>get</key><string>readPreferenceValue:</string><key>set</key><string>setPreferenceValue:specifier:</string></dict>
+<dict><key>cell</key><string>PSGroupCell</string><key>footerText</key><string>更改边框样式、动画帧率及导入素材，请打开桌面的灵动幻彩岛 App。录屏开关只隐藏插件覆盖层，不能擦除系统原生黑岛。</string></dict>
+</array></dict></plist>
