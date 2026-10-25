@@ -1,0 +1,24 @@
+#!/bin/sh
+# RootHide keeps /var/mobile/Media inside jbroot, while SpringBoard and the app
+# read the real rootfs path. Seed the real directory and hand it to mobile so
+# both the app and the preference bundle can save settings.
+JB=/var/mobile/Media/IslandPrism
+REAL=$JB
+if [ -d /rootfs ]; then
+    REAL=/rootfs/var/mobile/Media/IslandPrism
+fi
+
+mkdir -p "$REAL" 2>/dev/null || true
+
+if [ ! -s "$REAL/config.json" ] && [ -s "$JB/config.json" ]; then
+    cp "$JB/config.json" "$REAL/config.json" 2>/dev/null || true
+fi
+
+chown -R mobile:mobile "$REAL" 2>/dev/null || true
+chmod 0775 "$REAL" 2>/dev/null || true
+[ -f "$REAL/config.json" ] && chmod 0664 "$REAL/config.json" 2>/dev/null || true
+
+for d in left right; do
+    [ -d "$REAL/$d" ] && chown -R mobile:mobile "$REAL/$d" 2>/dev/null || true
+done
+exit 0
