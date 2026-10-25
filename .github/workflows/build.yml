@@ -67,7 +67,7 @@ jobs:
       - name: Build package
         run: |
           make clean 2>/dev/null || true
-          make package messages=yes
+          make package messages=yes DEBUG=0 FINALPACKAGE=1
           echo "=== packages ==="
           find ./packages -maxdepth 1 -name '*.deb' -type f
 
